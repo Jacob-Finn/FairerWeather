@@ -28,7 +28,7 @@
         <!--Fairer Weather-->
         <scene sceneID="Txl-lF-0Sk">
             <objects>
-                <viewController title="Fairer Weather" id="7xi-10-ltA" sceneMemberID="viewController">
+                <viewController title="Fairer Weather" id="7xi-10-ltA" customClass="ViewController" customModule="FairerWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cMd-sY-SoZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
