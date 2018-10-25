@@ -12,9 +12,13 @@
 		7B9D5A582180FECF007AAD48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9D5A562180FECF007AAD48 /* Main.storyboard */; };
 		7B9D5A5A2180FED1007AAD48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9D5A592180FED1007AAD48 /* Assets.xcassets */; };
 		7B9D5A5D2180FED1007AAD48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9D5A5B2180FED1007AAD48 /* LaunchScreen.storyboard */; };
+		7BE742F2218236F100A25A66 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE742F1218236F100A25A66 /* APIKeys.swift */; };
+		8213AA83854B3150DE8D6873 /* Pods_FairerWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3930731153F7B3E68E5181A0 /* Pods_FairerWeather.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0026F0E11BAA39EE9D448924 /* Pods-FairerWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FairerWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FairerWeather/Pods-FairerWeather.debug.xcconfig"; sourceTree = "<group>"; };
+		3930731153F7B3E68E5181A0 /* Pods_FairerWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FairerWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B9D5A4F2180FECF007AAD48 /* FairerWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FairerWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B9D5A522180FECF007AAD48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B9D5A542180FECF007AAD48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		7B9D5A592180FED1007AAD48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B9D5A5C2180FED1007AAD48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B9D5A5E2180FED1007AAD48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BE742F1218236F100A25A66 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		D8271AE14B77D5F5487C263D /* Pods-FairerWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FairerWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-FairerWeather/Pods-FairerWeather.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8213AA83854B3150DE8D6873 /* Pods_FairerWeather.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02C5BAC9E9EC4FAF0D2DE046 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3930731153F7B3E68E5181A0 /* Pods_FairerWeather.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74964F6864A48F54D8ACCF05 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0026F0E11BAA39EE9D448924 /* Pods-FairerWeather.debug.xcconfig */,
+				D8271AE14B77D5F5487C263D /* Pods-FairerWeather.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7B9D5A462180FECF007AAD48 = {
 			isa = PBXGroup;
 			children = (
 				7B9D5A512180FECF007AAD48 /* FairerWeather */,
 				7B9D5A502180FECF007AAD48 /* Products */,
+				74964F6864A48F54D8ACCF05 /* Pods */,
+				02C5BAC9E9EC4FAF0D2DE046 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +86,7 @@
 				7B9D5A592180FED1007AAD48 /* Assets.xcassets */,
 				7B9D5A5B2180FED1007AAD48 /* LaunchScreen.storyboard */,
 				7B9D5A5E2180FED1007AAD48 /* Info.plist */,
+				7BE742F1218236F100A25A66 /* APIKeys.swift */,
 			);
 			path = FairerWeather;
 			sourceTree = "<group>";
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B9D5A612180FED1007AAD48 /* Build configuration list for PBXNativeTarget "FairerWeather" */;
 			buildPhases = (
+				05D9227C1743B7F0416FDBFA /* [CP] Check Pods Manifest.lock */,
 				7B9D5A4B2180FECF007AAD48 /* Sources */,
 				7B9D5A4C2180FECF007AAD48 /* Frameworks */,
 				7B9D5A4D2180FECF007AAD48 /* Resources */,
+				6F35D8C8C423373A5DAC7C23 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,11 +159,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05D9227C1743B7F0416FDBFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FairerWeather-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F35D8C8C423373A5DAC7C23 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FairerWeather/Pods-FairerWeather-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FairerWeather/Pods-FairerWeather-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7B9D5A4B2180FECF007AAD48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BE742F2218236F100A25A66 /* APIKeys.swift in Sources */,
 				7B9D5A552180FECF007AAD48 /* ViewController.swift in Sources */,
 				7B9D5A532180FECF007AAD48 /* AppDelegate.swift in Sources */,
 			);
@@ -280,6 +351,7 @@
 		};
 		7B9D5A622180FED1007AAD48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0026F0E11BAA39EE9D448924 /* Pods-FairerWeather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,12 +363,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.interaptskills.FairerWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		7B9D5A632180FED1007AAD48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8271AE14B77D5F5487C263D /* Pods-FairerWeather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -308,7 +381,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.interaptskills.FairerWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
