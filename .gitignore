@@ -4,6 +4,7 @@
 *.zip
 
 FairerWeather/APIKeys.swift
+FairerWeather/APIKey.swift
 
 # Xcode
 #
@@ -73,5 +74,4 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
-FairerWeather/APIKeys.swift
 apikeys.rtf
