@@ -28,7 +28,7 @@
         <!--Fairer Weather-->
         <scene sceneID="Txl-lF-0Sk">
             <objects>
-                <viewController title="Fairer Weather" id="7xi-10-ltA" customClass="ViewController" customModule="FairerWeather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Fairer Weather" id="7xi-10-ltA" customClass="WeatherDisplayViewController" customModule="FairerWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cMd-sY-SoZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,19 +50,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lLn-B9-sIk">
-                                <rect key="frame" x="30" y="129" width="315" height="354"/>
+                                <rect key="frame" x="30" y="129" width="315" height="291.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kRf-6d-TNg">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="169"/>
-                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☀️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZy-nD-cUn">
+                                        <rect key="frame" x="76" y="0.0" width="163" height="179.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="97º F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hx2-co-KHd">
-                                        <rect key="frame" x="110.5" y="189" width="94.5" height="121"/>
+                                        <rect key="frame" x="110.5" y="199.5" width="94.5" height="48"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RjV-aF-YM5">
-                                        <rect key="frame" x="107" y="330" width="101.5" height="24"/>
+                                        <rect key="frame" x="107" y="267.5" width="101.5" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="150º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYG-Eu-NO8">
                                                 <rect key="frame" x="0.0" y="0.0" width="42" height="24"/>
@@ -86,18 +89,25 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glasgow, Kentucky" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uW-Js-t3C">
+                                <rect key="frame" x="15" y="64" width="145" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="lLn-B9-sIk" firstAttribute="leading" secondItem="Loj-Lr-WQh" secondAttribute="leading" constant="30" id="FdX-JO-n2m"/>
-                            <constraint firstItem="lLn-B9-sIk" firstAttribute="top" secondItem="f6C-Zt-irO" secondAttribute="bottom" constant="40" id="HWG-BK-zTP"/>
+                            <constraint firstItem="3uW-Js-t3C" firstAttribute="leading" secondItem="Loj-Lr-WQh" secondAttribute="leading" constant="15" id="I0Q-5a-fem"/>
                             <constraint firstItem="445-gR-3j1" firstAttribute="bottom" secondItem="Loj-Lr-WQh" secondAttribute="bottom" id="K0K-il-4gI"/>
-                            <constraint firstItem="Loj-Lr-WQh" firstAttribute="trailing" secondItem="lLn-B9-sIk" secondAttribute="trailing" constant="30" id="PD9-pR-SpZ"/>
-                            <constraint firstItem="445-gR-3j1" firstAttribute="top" secondItem="lLn-B9-sIk" secondAttribute="bottom" constant="150" id="Qsb-91-39k"/>
                             <constraint firstItem="445-gR-3j1" firstAttribute="leading" secondItem="Loj-Lr-WQh" secondAttribute="leading" id="S1f-kc-UlI"/>
+                            <constraint firstItem="3uW-Js-t3C" firstAttribute="top" secondItem="Loj-Lr-WQh" secondAttribute="top" id="Teq-LY-4gR"/>
                             <constraint firstItem="Loj-Lr-WQh" firstAttribute="trailing" secondItem="f6C-Zt-irO" secondAttribute="trailing" constant="16" id="Xuq-fh-P8x"/>
+                            <constraint firstItem="Loj-Lr-WQh" firstAttribute="trailing" secondItem="lLn-B9-sIk" secondAttribute="trailing" constant="30" id="fZ8-iI-vTa"/>
                             <constraint firstItem="f6C-Zt-irO" firstAttribute="top" secondItem="Loj-Lr-WQh" secondAttribute="top" id="g7i-sp-4cM"/>
                             <constraint firstItem="f6C-Zt-irO" firstAttribute="leading" secondItem="Loj-Lr-WQh" secondAttribute="leading" constant="16" id="g7w-gn-RiT"/>
+                            <constraint firstItem="lLn-B9-sIk" firstAttribute="leading" secondItem="Loj-Lr-WQh" secondAttribute="leading" constant="30" id="lhE-Pp-KGC"/>
+                            <constraint firstItem="lLn-B9-sIk" firstAttribute="top" secondItem="f6C-Zt-irO" secondAttribute="bottom" constant="40" id="vC6-HA-bHb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Loj-Lr-WQh"/>
                     </view>
@@ -108,29 +118,33 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Change Location"/>
                                 <connections>
-                                    <segue destination="LcJ-XR-Wfr" kind="show" id="DoK-zh-aK3"/>
+                                    <segue destination="LcJ-XR-Wfr" kind="show" identifier="changeLocation" id="DoK-zh-aK3"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="coldTemperatureLabel" destination="iuk-5y-PWK" id="8h3-23-7XW"/>
+                        <outlet property="conditionLabel" destination="vZy-nD-cUn" id="hDf-dt-MgC"/>
+                        <outlet property="currentTemperatureLabel" destination="Hx2-co-KHd" id="hC6-UN-cN8"/>
+                        <outlet property="highTemperatureLabel" destination="XYG-Eu-NO8" id="WhG-WY-qUm"/>
+                        <outlet property="locationLabel" destination="3uW-Js-t3C" id="78w-31-FPE"/>
+                        <segue destination="8HU-yF-bOs" kind="unwind" unwindAction="unwindToMainWithSegue:" id="LWs-IT-4HY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A4L-dr-x0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8HU-yF-bOs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="205.59999999999999" y="-561.76911544227892"/>
         </scene>
         <!--Change location-->
         <scene sceneID="vwR-Zv-bFR">
             <objects>
-                <viewController title="Change location" id="LcJ-XR-Wfr" sceneMemberID="viewController">
+                <viewController title="Change location" id="LcJ-XR-Wfr" customClass="LocationSelectorViewController" customModule="FairerWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RAn-65-TTS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="imd-9r-11Y">
-                                <rect key="frame" x="62" y="229" width="304" height="209"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="f8I-2g-klR">
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -144,8 +158,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ehh-KN-lNG"/>
                     </view>
+                    <connections>
+                        <outlet property="locationSearchBar" destination="f8I-2g-klR" id="ucw-kd-2IG"/>
+                        <segue destination="Cdz-F0-MWY" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMainWithSegue:" id="KDY-Qn-3xk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zly-Ff-usC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Cdz-F0-MWY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="977" y="-562"/>
         </scene>
