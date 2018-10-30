@@ -40,7 +40,7 @@ class WeatherDisplayViewController: UIViewController {
     
     func setupDefaultUI() {
         locationLabel.text = ""
-        conditionLabel.text = ""
+        conditionLabel.text = "⚙️"
         currentTemperatureLabel.text = "Enter a location"
         highTemperatureLabel.text = "-"
         coldTemperatureLabel.text = "-"
@@ -49,9 +49,9 @@ class WeatherDisplayViewController: UIViewController {
     func setupUIFromData(weatherData: WeatherData?) {
         if let weatherData = weatherData {
             conditionLabel.text = weatherData.condition.icon
-            currentTemperatureLabel.text = String(Int(weatherData.currentTemperature))
-            highTemperatureLabel.text = String(Int(weatherData.hotTemperature))
-            coldTemperatureLabel.text = String(Int(weatherData.coldTemperature))
+            currentTemperatureLabel.text = String(Int(weatherData.currentTemperature)) + "º"
+            highTemperatureLabel.text = String(Int(weatherData.hotTemperature)) + "º"
+            coldTemperatureLabel.text = String(Int(weatherData.coldTemperature)) + "º"
             guard let geocodeData = geocodeData else {
                 return
             }

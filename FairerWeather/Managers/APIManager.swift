@@ -14,13 +14,13 @@ class APIManager {
     
     static let sharedInstance = APIManager()
     
-    private init () {
-        
-    }
+    // MARK:- Variables
     
     private let googleBaseURL = "https://maps.googleapis.com/maps/api/geocode/json?address="
     private let darkSkyBaseUrl = "https://api.darksky.net/forecast/"
     private let apiKeys = APIKeys()
+    
+    // MARK:- Types
     
     private enum APIErrors: Error {
         case noData
@@ -28,7 +28,9 @@ class APIManager {
         case invalidData
     }
     
+    //MARK:- Methods
     
+    private init () { }
     
     func getWeather(latitude: Double, longitude: Double, onCompletion: @escaping (WeatherData?, Error?) -> ()) {
         let url = darkSkyBaseUrl + apiKeys.darkSkyKey + "/" + "\(latitude)" + "," + "\(longitude)"
